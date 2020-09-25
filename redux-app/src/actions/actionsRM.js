@@ -10,6 +10,7 @@ export const fetchData = (id) => (dispatch) => {
   dispatch({ type: FETCH_DATA_START });
 
   axios
+    //   .get(`https://rickandmortyapi.com/api/character/`{id}`)
     .get(`https://rickandmortyapi.com/api/character/1`)
     .then((res) => {
       console.log("actionsRM: API DATA", res);
