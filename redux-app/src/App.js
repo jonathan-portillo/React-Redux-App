@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { fetchData } from "./actions/actionsRM";
 import { connect } from "react-redux";
+import Character from "./components/character";
 
 function App(props) {
   console.log("App: Props :", props);
@@ -10,10 +11,16 @@ function App(props) {
   }, []);
   return (
     <div className="App">
-      <h1>Rick and Morty Character Randomizer!!</h1>
+      <Character />
+      {/* <h1>Rick Information Card</h1>
       <div>
-        <h2>Character: {props.rm_data.name}</h2>
-        <img src={props.rm_data.img} />
+        <h2>{props.rm_data.name}</h2>
+        <img src={props.rm_data.img} /> */}
+
+      <div>
+        {/* {props.rm_data.map((state) => {
+            <h1>Name: {state.rm_data.name}</h1>;
+          })} */}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { reducerRM } from "./reducers/reducerRM";
 import "./index.css";
 import thunk from "redux-thunk";
 import App from "./App";
+import Character from "./components/character";
 
 const store = createStore(reducerRM, applyMiddleware(thunk));
 

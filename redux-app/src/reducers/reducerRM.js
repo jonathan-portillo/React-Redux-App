@@ -6,11 +6,14 @@ import {
 
 const initialState = {
   rm_data: {
-    // id: "",
     name: "",
     img: "",
+    location: "",
+    species: "",
+    status: "",
   },
   is_loading_data: false,
+  error: "",
 };
 
 export const reducerRM = (state = initialState, action) => {
@@ -25,6 +28,12 @@ export const reducerRM = (state = initialState, action) => {
         ...state,
         is_loading_data: false,
         rm_data: action.payload,
+      };
+    case FETCH_DATA_FAIL:
+      return {
+        ...state,
+        is_loading_data: false,
+        error: action.payload,
       };
     default:
       return state;
